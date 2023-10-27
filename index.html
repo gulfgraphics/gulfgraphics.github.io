@@ -23,7 +23,7 @@
     <a class="active" href="index.html"><h1>THE GULF GRAPHICS INDEX</h1></a>
 
     <div class="filter-box">
-    <h2>SEARCH AND FILTER:</h2>
+    <h2>Search and Filter By:</h2>
     <!-- Filter by keyword -->
     <label for="keywordFilter">Filter by Keyword:</label>
     <input type="text" id="keywordFilter" placeholder="global, pastel, etc." onkeydown="handleKeyPress(event)">
@@ -31,6 +31,8 @@
     <input type="checkbox" id="coverArtworkCheckbox"><label for="coverArtworkCheckbox">Cover Artwork</label>
     <input type="checkbox" id="socialMediaCheckbox"><label for="socialMediaCheckbox">Social Media</label>
     <input type="checkbox" id="videosCheckbox"><label for="videosCheckbox">Videos</label>
+    <input type="checkbox" id="yellowCheckbox"><label for="yellowCheckbox">Yellow</label>
+
 
     <!-- Earliest known example -->
     <br><label for="earliestKnownExample">Earliest Known Example:</label>
@@ -155,7 +157,7 @@
         </div>
         <!-- End Media Item #4-->
 
-<!-- Media Item #5-->
+        <!-- Media Item #5-->
         <div class="media-container">
             <img class="media" data-type="image" data-taxonomy="ayman zabib, rotana, 2001, sky, male singer, lebanese" data-earliest="2006" data-decade="2000s" data-original-width="150" src="media/zbib_ayman_qalouly_ansak_2006.png" alt="Qalouly Ansak">
             <div class="text-box">
@@ -196,7 +198,7 @@
             </div>
         </div>
         <!-- End Media Item #6-->
-        
+
         <!-- Add more media here -->
     </div>
 
@@ -240,6 +242,7 @@
     document.getElementById("coverArtworkCheckbox").checked = false;
     document.getElementById("socialMediaCheckbox").checked = false;
     document.getElementById("videosCheckbox").checked = false;
+    document.getElementById("yellowCheckbox").checked = false;
     // Add more lines for other checkboxes as needed
 
     searchHandler();
@@ -257,6 +260,7 @@ function searchHandler() {
     const coverArtworkChecked = document.getElementById("coverArtworkCheckbox").checked;
     const socialMediaChecked = document.getElementById("socialMediaCheckbox").checked;
     const videosChecked = document.getElementById("videosCheckbox").checked;
+    const yellowChecked = document.getElementById("yellowCheckbox").checked;
 
     // Loop through each media container to apply filters
     mediaContainers.forEach(container => {
@@ -277,6 +281,7 @@ function searchHandler() {
         const isCoverArtworkMatch = !coverArtworkChecked || mediaTaxonomy.includes("cover artwork");
         const isSocialMediaMatch = !socialMediaChecked || mediaTaxonomy.includes("social media");
         const isVideosMatch = !videosChecked || mediaTaxonomy.includes("videos");
+        const isYellowMatch = !yellowChecked || mediaTaxonomy.includes("yellow");
 
         const mediaYear = parseInt(mediaItem.getAttribute("data-earliest"));
         const isEarliestExampleMatch = checkYearRange(mediaYear, earliestExampleType, earliestStart, earliestEnd);
