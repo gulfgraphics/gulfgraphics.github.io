@@ -28,10 +28,10 @@
     <label for="keywordFilter">Filter by Keyword:</label>
     <input type="text" id="keywordFilter" placeholder="global, pastel, etc." onkeydown="handleKeyPress(event)">
     <br>
-    <input type="checkbox" id="coverArtworkCheckbox"><label for="coverArtworkCheckbox">Cover Artwork</label>
+    <input type="checkbox" id="albumCoverCheckbox"><label for="albumCoverCheckbox">Album Cover</label>
     <input type="checkbox" id="socialMediaCheckbox"><label for="socialMediaCheckbox">Social Media</label>
     <input type="checkbox" id="videosCheckbox"><label for="videosCheckbox">Videos</label>
-    <input type="checkbox" id="yellowCheckbox"><label for="yellowCheckbox">Yellow</label>
+    <input type="checkbox" id="graphicartworkCheckbox"><label for="graphicartworkCheckbox">Graphic Artwork</label>
 
 
     <!-- Earliest known example -->
@@ -239,10 +239,10 @@
     sortOrder.value = "nameAZ";
 
     // Clear checkboxes
-    document.getElementById("coverArtworkCheckbox").checked = false;
+    document.getElementById("albumCoverCheckbox").checked = false;
     document.getElementById("socialMediaCheckbox").checked = false;
     document.getElementById("videosCheckbox").checked = false;
-    document.getElementById("yellowCheckbox").checked = false;
+    document.getElementById("graphicartworkCheckbox").checked = false;
     // Add more lines for other checkboxes as needed
 
     searchHandler();
@@ -257,10 +257,10 @@ function searchHandler() {
     const selectedSortOrder = sortOrder.value;
 
     // Get the values of the keyword checkboxes
-    const coverArtworkChecked = document.getElementById("coverArtworkCheckbox").checked;
+    const albumCoverChecked = document.getElementById("albumCoverCheckbox").checked;
     const socialMediaChecked = document.getElementById("socialMediaCheckbox").checked;
     const videosChecked = document.getElementById("videosCheckbox").checked;
-    const yellowChecked = document.getElementById("yellowCheckbox").checked;
+    const graphicartworkChecked = document.getElementById("graphicartworkCheckbox").checked;
 
     // Loop through each media container to apply filters
     mediaContainers.forEach(container => {
@@ -278,10 +278,10 @@ function searchHandler() {
         ));
 
         // Check if the media type matches the selected checkboxes
-        const isCoverArtworkMatch = !coverArtworkChecked || mediaTaxonomy.includes("cover artwork");
+        const isalbumCoverMatch = !albumCoverChecked || mediaTaxonomy.includes("album cover");
         const isSocialMediaMatch = !socialMediaChecked || mediaTaxonomy.includes("social media");
         const isVideosMatch = !videosChecked || mediaTaxonomy.includes("videos");
-        const isYellowMatch = !yellowChecked || mediaTaxonomy.includes("yellow");
+        const isGraphicartworkMatch = !graphicartworkChecked || mediaTaxonomy.includes("graphicartwork");
 
         const mediaYear = parseInt(mediaItem.getAttribute("data-earliest"));
         const isEarliestExampleMatch = checkYearRange(mediaYear, earliestExampleType, earliestStart, earliestEnd);
@@ -289,9 +289,9 @@ function searchHandler() {
 
         // Show/hide the media container based on filter results
         if (isKeywordMatch && isEarliestExampleMatch && isDecadeMatch) {
-            if ((socialMediaChecked && isSocialMediaMatch) || (yellowChecked && isYellowMatch)) {
+            if ((socialMediaChecked && isSocialMediaMatch) || (graphicartworkChecked && isgraphicartworkMatch)) {
                 container.style.display = "block";
-            } else if (!socialMediaChecked && !yellowChecked) {
+            } else if (!socialMediaChecked && !graphicartworkChecked) {
                 container.style.display = "block";
             } else {
                 container.style.display = "none";
