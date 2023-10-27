@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.cdnfonts.com/css/apple-chancery');
+
+body {
+    font-family: 'Roboto Mono'; /* change font here */
+    font-weight: 400; /* change density of font here ex. 100, 200, 300, 400, 500 */
+    background-color: rgb(245, 245, 245); /* change background color here */
+    color: #333; /* change text color here*/
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+    padding-bottom: 200px;
+}
+
+h1 {
+    color: red; /* change color of title text here */
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: "Roboto Mono", sans-serif;
+}
+
+p {
+    font-size: 16px; /* change size of text here */
+    margin: 0 auto;
+}
+
+ .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.image {
+    width: 150px;
+    height: auto;
+    object-fit:contain;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.media-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px;
+}
+.media {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    padding: 10px;
+    float: left;
+}
+
+label,
+input[type="text"],
+select {
+    font-family: "Roboto Mono", sans-serif; /* Replace "Roboto" with your desired font */
+}
+
+.filter-button {
+    font-family: "Roboto Mono", sans-serif; /* Replace "Orbitron" with your desired font */
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+a:hover{
+    font-family: 'Apple Chancery', sans-serif;
+}
+
+a:hover h1{
+    font-family: "Apple Chancery", sans-serif;
+}
+
+a:visited{
+    color: red;
+}
+
+.top-left-nav {
+    position: fixed;
+    top: 10px;
+    left: 60px;
+    color: red;
+    font-size: 30px;
+}
+
+.top-right-nav {
+    position: fixed;
+    top: 10px;
+    right: 60px;
+    color: red;
+    font-size: 30px;
+}
+
+.bottom-left-nav {
+    position: fixed;
+    bottom: 10px;
+    left: 60px;
+    color: red;
+    font-size: 30px;
+}
+
+.filter-box{
+    padding-bottom: 40px;
+}
+
+.media-container {
+    display: flex; /* Use flex to align media and text side by side */
+    align-items: flex-start; /* Align items to the top within the container */
+    overflow-wrap: break-word; /* Allow text to wrap to the next line */
+}
+
+.text-box {
+    display: none;
+    padding-left:0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    position: relative;
+    width: 120px;
+    font-size: 15px;
+    height: 100%;
+    overflow-wrap: break-word; /* Allow text to wrap to the next line */
+}
+
+
+.bordered {
+    background-color: white;
+}
+
+a h1{
+    color: red; /* change color of title text here */
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: "Roboto Mono", sans-serif;
+}
+
+
+a.active h1{
+    color: red; /* change color of title text here */
+    text-align: center;
+    font-weight: 400;
+    font-size: 40px;
+    font-family: "Apple Chancery", sans-serif;
+}
+
+.top-left-nav.active{
+    font-family: "Apple Chancery", sans-serif;
+}
+
+.top-right-nav.active{
+    font-family: "Apple Chancery", sans-serif;
+}
+
+.bottom-left-nav.active{
+    font-family: "Apple Chancery", sans-serif;
+}
+h5.tags{
+    position: absolute;
+    bottom: 5px;
+    font-size: 15px;
+}
+
+h4.design{
+    position: relative;
+    top:-50px;
+    font-weight: 400;
+    overflow-wrap: break-word; /* Allow text to wrap to the next line */
+}
+
+button.tag-button{
+    border: none;
+    background-color: #fff;
+    text-decoration: underline;
+    font-style: italic;
+}
+button.tag-button:hover{
+    color: red;
+}
+
+.text-box p{
+    height: fit-content;
+    max-height: 100%; /* Set a maximum height for the text content */
+    overflow-wrap: break-word; /* Allow text to wrap to the next line */
+}
