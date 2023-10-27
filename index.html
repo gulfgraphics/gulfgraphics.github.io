@@ -31,8 +31,6 @@
     <input type="checkbox" id="coverArtworkCheckbox"><label for="coverArtworkCheckbox">Cover Artwork</label>
     <input type="checkbox" id="socialMediaCheckbox"><label for="socialMediaCheckbox">Social Media</label>
     <input type="checkbox" id="videosCheckbox"><label for="videosCheckbox">Videos</label>
-    <input type="checkbox" id="yellowCheckbox"><label for="yellowCheckbox">Yellow</label>
-
 
     <!-- Earliest known example -->
     <br><label for="earliestKnownExample">Earliest Known Example:</label>
@@ -200,7 +198,6 @@
     document.getElementById("coverArtworkCheckbox").checked = false;
     document.getElementById("socialMediaCheckbox").checked = false;
     document.getElementById("videosCheckbox").checked = false;
-    document.getElementById("yellowCheckbox").checked = false;
     // Add more lines for other checkboxes as needed
 
     searchHandler();
@@ -218,7 +215,6 @@ function searchHandler() {
     const coverArtworkChecked = document.getElementById("coverArtworkCheckbox").checked;
     const socialMediaChecked = document.getElementById("socialMediaCheckbox").checked;
     const videosChecked = document.getElementById("videosCheckbox").checked;
-    const yellowChecked = document.getElementById("yellowCheckbox").checked;
 
     // Loop through each media container to apply filters
     mediaContainers.forEach(container => {
@@ -239,7 +235,6 @@ function searchHandler() {
         const isCoverArtworkMatch = !coverArtworkChecked || mediaTaxonomy.includes("cover artwork");
         const isSocialMediaMatch = !socialMediaChecked || mediaTaxonomy.includes("social media");
         const isVideosMatch = !videosChecked || mediaTaxonomy.includes("videos");
-        const isYellowMatch = !yellowChecked || mediaTaxonomy.includes("yellow");
 
         const mediaYear = parseInt(mediaItem.getAttribute("data-earliest"));
         const isEarliestExampleMatch = checkYearRange(mediaYear, earliestExampleType, earliestStart, earliestEnd);
