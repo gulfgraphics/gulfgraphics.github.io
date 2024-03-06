@@ -26,7 +26,6 @@ h2{
 
 p {
     font-size: 16px; /* change size of text here */
-    margin: 0 auto;
 }
 
  .image-gallery {
@@ -161,6 +160,7 @@ a:visited{
     font-size: 15px;
     height: 100%;
     overflow-wrap: break-word; /* Allow text to wrap to the next line */
+    overflow: hidden;
 }
 
 
@@ -195,6 +195,7 @@ h4.design{
     top:-50px;
     font-weight: 400;
     overflow-wrap: break-word; /* Allow text to wrap to the next line */
+    overflow: hidden;
 }
 
 button.tag-button{
@@ -211,6 +212,7 @@ button.tag-button:hover{
     height: fit-content;
     max-height: 100%; /* Set a maximum height for the text content */
     overflow-wrap: break-word; /* Allow text to wrap to the next line */
+    overflow: hidden;
 }
 
 .about img{
