@@ -9,18 +9,48 @@
     </style>
 </head>
 <body>
-    <div class="top-left-nav">
-        <a href="/about">ABOUT</a>
+    <div class="top-nav">
+        <div class="left-nav">
+            <a href="/about.html">ABOUT</a>
+        </div> 
+        <div class="title-nav">
+            <a href="index.html"><img src="./images/logo.png" height="120px"></a>
+        </div>
+            <div class="right-nav">
+            <a href="/thesis.html">THESIS</a>
+        </div>
     </div>
-    
-    <div class="top-right-nav">
-        <a href="/thesis">THESIS</a>
+
+
+    <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <ul id="menu">
+            <a style="font-family: 'Apple Chancery' sans-serif;" href="/index.html"><li>Home</li></a>
+            <a href="/about.html"><li>About</li></a>
+            <a href="/thesis.html"><li>Thesis</li></a>
+            <a href="/contact.html"><li>Contact</li></a>
+          </ul>
+        </div>
+      </nav>
+
     </div>
-    
-    <div class="bottom-left-nav">
-        <a href="/contact">CONTACT/SUBMIT</a>
-    </div>
-    <a class="active" href="index.html"><h1>THE GULF GRAPHICS INDEX</h1></a>
+
 
     <div class="filter-box">
     <h2>Search and Filter By:</h2>
@@ -502,7 +532,7 @@
         <!-- Add more media here -->
     </div>
 
-    <!-- JavaScript for handling search and filter logic -->
+<!-- JavaScript for handling search and filter logic -->
     <script>
         const keywordFilter = document.getElementById("keywordFilter");
         const earliestKnownExample = document.getElementById("earliestKnownExample");
@@ -667,7 +697,7 @@ function checkYearRange(mediaYear, rangeType, startYear, endYear) {
                 const textBox = container.querySelector('.text-box');
                 textBox.style.display = 'grid';
 
-                // Add the 'bordered' class to the clicked media container
+                // Add the 'bordered' class to the clicked media container and add minimum height
                 container.classList.add('bordered');
                 mediaItem.style.width = '450px';
             });
@@ -709,5 +739,12 @@ tagButtons.forEach(button => {
 
         
     </script>
+
 </body>
+<footer>
+    <div class="bottom-left-nav">
+        <a href="/contact.html">CONTACT/SUBMIT</a>
+    </div>
+</footer>
 </html>
+
