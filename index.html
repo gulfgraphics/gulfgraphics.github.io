@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+         function handleKeyPress(event) {}
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+
     <title>THE GULF GRAPHICS INDEX</title>
     <style>
 
@@ -11,13 +15,13 @@
 <body>
     <div class="top-nav">
         <div class="left-nav">
-            <a href="/about.html">ABOUT</a>
+            <a href="about.html">ABOUT</a>
         </div> 
         <div class="title-nav">
             <a href="index.html"><img src="./images/logo.png" height="120px"></a>
         </div>
             <div class="right-nav">
-            <a href="/thesis.html">THESIS</a>
+            <a href="#">THESIS</a>
         </div>
     </div>
 
@@ -44,7 +48,7 @@
             <a style="font-family: 'Apple Chancery' sans-serif;" href="/index.html"><li>Home</li></a>
             <a href="/about.html"><li>About</li></a>
             <a href="/thesis.html"><li>Thesis</li></a>
-            <a href="/contact.html"><li>Contact</li></a>
+            <a href="mailto:trqalobaid@gmail.com?subject=SUBMISSION/CONTACT REQUEST:"><li>Contact</li></a>
           </ul>
         </div>
       </nav>
@@ -58,10 +62,11 @@
     <label for="keywordFilter">Filter by Keyword:</label>
     <input type="text" id="keywordFilter" placeholder="global, pastel, etc." onkeydown="handleKeyPress(event)">
     <br>
-    <input type="checkbox" id="albumCoverCheckbox"><label for="albumCoverCheckbox">Album Cover</label>
-    <input type="checkbox" id="socialMediaCheckbox"><label for="socialMediaCheckbox">Social Media</label>
-    <input type="checkbox" id="videosCheckbox"><label for="videosCheckbox">Videos</label>
-    <input type="checkbox" id="graphicartworkCheckbox"><label for="graphicartworkCheckbox">Graphic Artwork</label>
+    <input type="checkbox" id="albumCoverCheckbox" name="category" value="album cover"><label for="albumCoverCheckbox">Album Cover</label>
+    <input type="checkbox" id="socialMediaCheckbox" name="category" value="social media"><label for="socialMediaCheckbox">Social Media</label>
+    <input type="checkbox" id="videosCheckbox" name="category" value="videos"><label for="videosCheckbox">Videos</label>
+    <input type="checkbox" id="graphicartworkCheckbox" name="category" value="graphic artwork"><label for="graphicartworkCheckbox">Graphic Artwork</label>
+    
 
 
     <!-- Earliest known example -->
@@ -189,15 +194,16 @@
 
         <!-- Media Item #5-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="ayman zabib, rotana, 2001, sky, male singer, lebanese" data-earliest="2006" data-decade="2000s" data-original-width="150" src="media/zbib_ayman_qalouly_ansak_2006.png" alt="Qalouly Ansak">
+            <img class="media" data-type="image" data-taxonomy="ayman zabib, rotana, 2001, sky, male singer, lebanese, 2000s, 2006" data-earliest="2006" data-decade="2000s" data-original-width="150" src="media/zbib_ayman_qalouly_ansak_2006.png" alt="Qalouly Ansak">
             <div class="text-box">
                 <p>Zbib, Ayman. “Qalouly Ansak”
                     <br>Rotana, 2006.
                     <h4 class="design">Design: Unknown.<br>Photography: Unknown.</h4>
                     <h5 class="tags">
-                        <button class="tag-button" data-tag="ayman zbib">#ayman zbib</button>
+                        <button class="tag-button" data-tag="ayman zabib">#ayman zabib</button>
                         <button class="tag-button" data-tag="rotana">#rotana</button>
-                        <button class="tag-button" data-tag="2006">#2006</button>
+                        <button class="tag-button" data-tag="2001">#2001</button>
+                        <button class="tag-button" data-tag="2001">#2006</button>
                         <button class="tag-button" data-tag="2000s">#2000s</button>
                         <button class="tag-button" data-tag="sky">#sky</button>
                         <button class="tag-button" data-tag="male singer">#male singer</button>
@@ -210,14 +216,14 @@
 
 <!-- Media Item #6-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="shams, stallions, 2006, animal print, female singer, khaleeji" data-earliest="2006" data-decade="2000s" data-original-width="150" src="media/shams_muzahara_nesaiea_2006.png" alt="Muzahara Nesaiea">
+            <img class="media" data-type="image" data-taxonomy="shams, stallions, 2006, animal print, female singer, khaleeji, 2000s" data-earliest="2006" data-decade="2000s" data-original-width="150" src="media/shams_muzahara_nesaiea_2006.png" alt="Muzahara Nesaiea">
             <div class="text-box">
                 <p>Shams. “Muzahara Nesaiea”
                     <br>Stallion Records, 2006.
                     <h4 class="design">Design: Georges Youssef<br>Photography: Rami Barbour.</h4>
                     <h5 class="tags">
                         <button class="tag-button" data-tag="shams">#shams</button>
-                        <button class="tag-button" data-tag="stallion">#stallion</button>
+                        <button class="tag-button" data-tag="stallions">#stallions</button>
                         <button class="tag-button" data-tag="2006">#2006</button>
                         <button class="tag-button" data-tag="2000s">#2000s</button>
                         <button class="tag-button" data-tag="animal print">#animal print</button>
@@ -251,7 +257,7 @@
 
 <!-- Media Item #8-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="female singer, 2002, 2000s, lebanese, nawal elzoghbi, singer" data-earliest="2002" data-decade="2000s" data-original-width="150" src="media/alzoghbi_nawal_elly_etmanatoh_2003.png" alt="Elly Etmanetoh">
+            <img class="media" data-type="image" data-taxonomy="female singer, sparkly, leather, 2002, 2000s, lebanese, nawal elzoghbi, singer" data-earliest="2002" data-decade="2000s" data-original-width="150" src="media/alzoghbi_nawal_elly_etmanatoh_2003.png" alt="Elly Etmanetoh">
             <div class="text-box">
                 <p>ElZoghbi, Nawal. "Elly Etmanetoh"
                     <br>Alam El Phan, 2002.
@@ -264,6 +270,7 @@
                         <button class="tag-button" data-tag="2000s">#2000s</button>
                         <button class="tag-button" data-tag="nawal elzoghbi">#nawal elzoghbi</button>
                         <button class="tag-button" data-tag="lebanese">#lebanese</button>
+                        <button class="tag-button" data-tag="singer">#singer</button>
                     </h5>
                 </p>
             </div>
@@ -272,7 +279,7 @@
 
 <!-- Media Item #9-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="makeup, 2012, 2010s, eye makeup, makeup artist, khaleeji" data-earliest="2012" data-decade="2010s" data-original-width="150" src="media/dashti_hanan_mekyaj_net_catalog.jpeg" alt="Mekyaj Catalog">
+            <img class="media" data-type="image" data-taxonomy="makeup, 2012, 2010s, eye makeup, makeup artist, khaleeji, hanan dashti" data-earliest="2012" data-decade="2010s" data-original-width="150" src="media/dashti_hanan_mekyaj_net_catalog.jpeg" alt="Mekyaj Catalog">
             <div class="text-box">
                 <p>Mekyaj Lookbook Catalog by Hanan Dashti
                     <br>khaleejia.blogspot.com, 2012.
@@ -293,7 +300,7 @@
 
 <!-- Media Item #9-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="female singer, 2002, 2000s, lebanese, nawal elzoghbi, singer" data-earliest="2002" data-decade="2000s" data-original-width="150" src="media/fares_myriam_ana_wel_shooq_perfume_ad.png" alt="Ana Wel Shog Perfume">
+            <img class="media" data-type="image" data-taxonomy="female singer, perfume, 2002, 2000s, myriam fares, lebanese" data-earliest="2002" data-decade="2000s" data-original-width="150" src="media/fares_myriam_ana_wel_shooq_perfume_ad.png" alt="Ana Wel Shog Perfume">
             <div class="text-box">
                 <p>Fares, Myriam. "Ana Wel Shog Perfume Poster"
                     <br>J. Casanova, unknown year. ~2000s.
@@ -312,7 +319,7 @@
 
 <!-- Media Item #10-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="magazine cover, khaleeji, singers, celebrities, gossip, 2000s, 2007, magazine, aljareema" data-earliest="2007" data-decade="2000s" data-original-width="150" src="media/aljareema_mag_mar_2007.png" alt="AlJareema Magazine">
+            <img class="media" data-type="image" data-taxonomy="magazine cover, khaleeji, singers, celebrities, gossip, 2000s, 2007, magazine, aljareema, female singer, male singer" data-earliest="2007" data-decade="2000s" data-original-width="150" src="media/aljareema_mag_mar_2007.png" alt="AlJareema Magazine">
             <div class="text-box">
                 <p>AlJareema Magazine, March 2007 edition.
                     <br>AlJareema, 2007.
@@ -326,6 +333,8 @@
                         <button class="tag-button" data-tag="female singer">#female singer</button>
                         <button class="tag-button" data-tag="male singer">#male singer</button>
                         <button class="tag-button" data-tag="khaleeji">#khaleeji</button>
+                        <button class="tag-button" data-tag="celebrities">#celebrities</button>
+                        <button class="tag-button" data-tag="gossip">#gossip</button>
                     </h5>
                 </p>
             </div>
@@ -347,6 +356,7 @@
                         <button class="tag-button" data-tag="haifa wehbe">#haifa wehbe</button>
                         <button class="tag-button" data-tag="female singer">#female singer</button>
                         <button class="tag-button" data-tag="lebanese">#lebanese</button>
+                        <button class="tag-button" data-tag="snob">#snob</button>
                     </h5>
                 </p>
             </div>
@@ -355,7 +365,7 @@
 
         <!-- Media Item #12-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="marwa, 2004, female singer, traditional, egyptian, lebanese" data-earliest="2004" data-decade="2000s" data-original-width="150" src="media/marwa_ama_naeema.png" alt="Ama Naeima by Marwa">
+            <img class="media" data-type="image" data-taxonomy="marwa, 2004, female singer, traditional, egyptian, lebanese, music master international, 2000s" data-earliest="2004" data-decade="2000s" data-original-width="150" src="media/marwa_ama_naeema.png" alt="Ama Naeima by Marwa">
             <div class="text-box">
                 <p>Marwa, "Ama Naeima".
                     <br>,Music Master International, 2004.
@@ -377,7 +387,7 @@
 
         <!-- Media Item #13-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="haifa wehbe, 2002, female singer, CD, black, lebanese" data-earliest="2002" data-decade="2000s" data-original-width="150" src="media/wehbe_haifa_houwa_el_zaman_cd_2002.png" alt="Houwa El Zaman">
+            <img class="media" data-type="image" data-taxonomy="haifa wehbe, 2002, rotana, 2000s, female singer, CD, album cover, black, lebanese" data-earliest="2002" data-decade="2000s" data-original-width="150" src="media/wehbe_haifa_houwa_el_zaman_cd_2002.png" alt="Houwa El Zaman">
             <div class="text-box">
                 <p>Wehbe, Haifa, "Houwa El Zaman" CD.
                     <br>Rotana, 2002.
@@ -399,13 +409,14 @@
 
 <!-- Media Item #14-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="sharif kamal azab, 2000s, female singer, book cover" data-earliest="2000" data-decade="2000s" data-original-width="150" src="media/azab_sharif_kamal_fananat_taeibat.png" alt="Fananat Taeiban">
+            <img class="media" data-type="image" data-taxonomy="sharif kamal azab, 2000s, female singer, book cover, religious" data-earliest="2000" data-decade="2000s" data-original-width="150" src="media/azab_sharif_kamal_fananat_taeibat.png" alt="Fananat Taeiban">
             <div class="text-box">
                 <p>Azab, Sharif Kamal, "Fananat Taeibat"<br>(Repentant Celebrities).
                     <br>Unknown publisher, unknown year.
                     <h4 class="design">Design: Unknown.<br>Photography: Unknown.</h4>
                     <h5 class="tags">
                         <button class="tag-button" data-tag="celebrities">#celebrities</button>
+                        <button class="tag-button" data-tag="sharif kamal azab">sharif kamal azab</button>
                         <button class="tag-button" data-tag="book cover">#book cover</button>
                         <button class="tag-button" data-tag="2002">#2002</button>
                         <button class="tag-button" data-tag="2000s">#2000s</button>
@@ -419,13 +430,13 @@
 
 <!-- Media Item #15-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="play, 2004, female actress, male actor, kuwaiti, khaleeji, poster" data-earliest="2004" data-decade="2000s" data-original-width="150" src="media/sabeq_wa_tali_poster_2004.png" alt="Sabeq Wa Tali">
+            <img class="media" data-type="image" data-taxonomy="play, 2004, 2000s, female actress, male actor, kuwaiti, khaleeji, poster" data-earliest="2004" data-decade="2000s" data-original-width="150" src="media/sabeq_wa_tali_poster_2004.png" alt="Sabeq Wa Tali">
             <div class="text-box">
                 <p>"Sabeq Wa Tali" play poster.
                     <br>Funoon, 2004.
                     <h4 class="design">Design: Unknown.<br>Photography: Unknown.</h4>
                     <h5 class="tags">
-                        <button class="tag-button" data-tag="kuwaiti">#kuwaiti </button>
+                        <button class="tag-button" data-tag="kuwaiti">#kuwaiti</button>
                         <button class="tag-button" data-tag="elham alfadhala">#elham alfadhala</button>
                         <button class="tag-button" data-tag="2004">#2004</button>
                         <button class="tag-button" data-tag="2000s">#2000s</button>
@@ -433,7 +444,7 @@
                         <button class="tag-button" data-tag="male actor">#male actor</button>
                         <button class="tag-button" data-tag="play">#play</button>
                         <button class="tag-button" data-tag="poster">#poster</button>
-                        <button class="tag-button" data-tag="khaleeji">#khaleeji </button>
+                        <button class="tag-button" data-tag="khaleeji">#khaleeji</button>
                     </h5>
                 </p>
             </div>
@@ -456,6 +467,7 @@
                         <button class="tag-button" data-tag="saudi">#saudi</button>
                         <button class="tag-button" data-tag="album cover">#album cover</button>
                         <button class="tag-button" data-tag="khaleeji">#khaleeji</button>
+                        <button class="tag-button" data-tag="rotana">#rotana</button>
                     </h5>
                 </p>
             </div>
@@ -464,7 +476,7 @@
 
 <!-- Media Item #17-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="jawad alali, 2001, 2000s, male singer, album cover" data-earliest="2001" data-decade="2000s" data-original-width="150" src="media/alali_jawad_ahebak_2001.jpeg" alt="Ahebak">
+            <img class="media" data-type="image" data-taxonomy="jawad alali, rotana, 2001, 2000s, male singer, album cover, khaleeji" data-earliest="2001" data-decade="2000s" data-original-width="150" src="media/alali_jawad_ahebak_2001.jpeg" alt="Ahebak">
             <div class="text-box">
                 <p>AlAli, Jawad, "Ahebak".
                     <br>Rotana, 2001.
@@ -475,7 +487,6 @@
                         <button class="tag-button" data-tag="2001">#2001</button>
                         <button class="tag-button" data-tag="2000s">#2000s</button>
                         <button class="tag-button" data-tag="male singer">#male singer</button>
-                        <button class="tag-button" data-tag="saudi">#saudi</button>
                         <button class="tag-button" data-tag="album cover">#album cover</button>
                         <button class="tag-button" data-tag="khaleeji">#khaleeji</button>
                     </h5>
@@ -486,15 +497,15 @@
 
 <!-- Media Item #18-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="banner, 2000s, female singer, forum, emirati, khaleeji, graphic design" data-earliest="2007" data-decade="2000s" data-original-width="150" src="media/muntadayat_alyazia.jpeg" alt="Muntadayat Alyazia">
+            <img class="media" data-type="image" data-taxonomy="web banner, 2000s, female singer, forum, emirati, alyazia, khaleeji, 2007, graphic design" data-earliest="2007" data-decade="2000s" data-original-width="150" src="media/muntadayat_alyazia.jpeg" alt="Muntadayat Alyazia">
             <div class="text-box">
                 <p>"منتديات اليازية" [Alyazia Forums] web banner.
                     <br>alyazia.yoo7.com, 2007.
                     <h4 class="design">Design: Unknown.<br>Photography: Unknown.</h4>
                     <h5 class="tags">
-                        <button class="tag-button" data-tag="emirati">#emirati </button>
-                        <button class="tag-button" data-tag="alyazia">#alyazia </button>
-                        <button class="tag-button" data-tag="2007">#2007 </button>
+                        <button class="tag-button" data-tag="emirati">#emirati</button>
+                        <button class="tag-button" data-tag="alyazia">#alyazia</button>
+                        <button class="tag-button" data-tag="2007">#2007</button>
                         <button class="tag-button" data-tag="2000s">#2000s</button>
                         <button class="tag-button" data-tag="female singer">#female singer</button>
                         <button class="tag-button" data-tag="web banner">#web banner</button>
@@ -508,7 +519,7 @@
 
 <!-- Media Item #19-->
         <div class="media-container">
-            <img class="media" data-type="image" data-taxonomy="wael kfoury, 2004, 2000s, male singer, album cover" data-earliest="2004" data-decade="2000s" data-original-width="150" src="media/wael_arreb_layi_2004_banner.jpeg" alt="Arrab Layi">
+            <img class="media" data-type="image" data-taxonomy="wael kfoury, 2004, 2000s, male singer, album cover, lebanese, georges youssef, mki, rotana" data-earliest="2004" data-decade="2000s" data-original-width="150" src="media/wael_arreb_layi_2004_banner.jpeg" alt="Arrab Layi">
             <div class="text-box">
                 <p>Kfoury, Wael, "Arrab Layi".
                     <br>Rotana, 2001.
@@ -532,218 +543,232 @@
         <!-- Add more media here -->
     </div>
 
-    <!-- JavaScript for handling search and filter logic -->
-    <script>
-        const keywordFilter = document.getElementById("keywordFilter");
-        const earliestKnownExample = document.getElementById("earliestKnownExample");
-        const earliestKnownExampleStart = document.getElementById("earliestKnownExampleStart");
-        const earliestKnownExampleEnd = document.getElementById("earliestKnownExampleEnd");
-        const relevantDecade = document.getElementById("relevantDecade");
-        const sortOrder = document.getElementById("sortOrder");
-        const searchButton = document.getElementById("searchButton");
-        const clearFilters = document.getElementById("clearFilters");
-        const mediaGallery = document.getElementById("mediaGallery");
+</body>
 
-        // Get all the media containers in the gallery
-        const mediaContainers = Array.from(mediaGallery.querySelectorAll(".media-container"));
-
-        // Clear all form elements on page load
-        keywordFilter.value = "";
-        earliestKnownExample.value = "between";
-        earliestKnownExampleStart.value = "";
-        earliestKnownExampleEnd.value = "";
-        relevantDecade.value = "";
-        sortOrder.value = "nameAZ";
-
-        // Add event listeners for clear filters and search
-        clearFilters.addEventListener("click", clearFiltersHandler);
-        searchButton.addEventListener("click", searchHandler);
-
-        function clearFiltersHandler() {
-    // Clear all filter fields, including the keyword filter
+<script>
+const keywordFilter = document.getElementById("keywordFilter");
+    const earliestKnownExample = document.getElementById("earliestKnownExample");
+    const earliestKnownExampleStart = document.getElementById("earliestKnownExampleStart");
+    const earliestKnownExampleEnd = document.getElementById("earliestKnownExampleEnd");
+    const relevantDecade = document.getElementById("relevantDecade");
+    const sortOrder = document.getElementById("sortOrder");
+    const searchButton = document.getElementById("searchButton");
+    const clearFilters = document.getElementById("clearFilters");
+    const mediaGallery = document.getElementById("mediaGallery");
+    
+    // Get all the media containers in the gallery
+    const mediaContainers = Array.from(mediaGallery.querySelectorAll(".media-container"));
+    
+    // Clear all form elements on page load
     keywordFilter.value = "";
     earliestKnownExample.value = "between";
     earliestKnownExampleStart.value = "";
     earliestKnownExampleEnd.value = "";
     relevantDecade.value = "";
     sortOrder.value = "nameAZ";
-
+    
+    // Add event listeners for clear filters and search
+    clearFilters.addEventListener("click", clearFiltersHandler);
+    searchButton.addEventListener("click", searchHandler);
+    
+    function clearFiltersHandler() {
+    // Clear all filter fields
+    keywordFilter.value = "";
+    earliestKnownExample.value = "between";
+    earliestKnownExampleStart.value = "";
+    earliestKnownExampleEnd.value = "";
+    relevantDecade.value = "";
+    sortOrder.value = "nameAZ";
+    
     // Clear checkboxes
     document.getElementById("albumCoverCheckbox").checked = false;
     document.getElementById("socialMediaCheckbox").checked = false;
     document.getElementById("videosCheckbox").checked = false;
     document.getElementById("graphicartworkCheckbox").checked = false;
-    // Add more lines for other checkboxes as needed
+
+    // const isEarliestExampleMatch = checkYearRange(mediaYear, earliestExampleType, earliestStart, earliestEnd);
+    // const isDecadeMatch = selectedDecade === "" || mediaItem.getAttribute("data-decade") === selectedDecade;
+    // const mediaYear = parseInt(mediaItem.getAttribute("data-earliest"));
+
+    // function checkYearRange(mediaYear, rangeType, startYear, endYear) {
+    //     if (isNaN(mediaYear)) {
+    //         return true; // Display media without a year
+    //     }
+    //     if (rangeType === "before" && !isNaN(startYear)) {
+    //         return mediaYear < startYear;
+    //     } 
+    //     else if (rangeType === "after" && !isNaN(endYear)) {
+    //         return mediaYear > endYear;
+    //     } 
+    //     else if (rangeType === "between" && !isNaN(startYear) && !isNaN(endYear)) {
+    //         return mediaYear >= startYear && mediaYear <= endYear;
+    //     } 
+    //     else {
+    //         return true; // Display media if no year range is specified
+    //     }
+    // }
 
     searchHandler();
-}
+    }
 
-function searchHandler() {
+    function searchHandler() {
     const keywords = keywordFilter.value.toLowerCase().split(' ').map(keyword => keyword.trim());
     const earliestExampleType = earliestKnownExample.value;
     const earliestStart = parseInt(earliestKnownExampleStart.value);
     const earliestEnd = parseInt(earliestKnownExampleEnd.value);
     const selectedDecade = relevantDecade.value;
     const selectedSortOrder = sortOrder.value;
-
+    
     // Get the values of the keyword checkboxes
     const albumCoverChecked = document.getElementById("albumCoverCheckbox").checked;
     const socialMediaChecked = document.getElementById("socialMediaCheckbox").checked;
     const videosChecked = document.getElementById("videosCheckbox").checked;
     const graphicartworkChecked = document.getElementById("graphicartworkCheckbox").checked;
 
+    if(albumCoverChecked){
+        keywords.push("album cover");
+    }
+    if(socialMediaChecked){
+        keywords.push("social media");
+    }
+    if(videosChecked){
+        keywords.push("video");
+    }
+    if(graphicartworkChecked){
+        keywords.push("graphic artwork")
+    }
+
+
+    
     // Loop through each media container to apply filters
     mediaContainers.forEach(container => {
-        const mediaItem = container.querySelector('.media');
-        const textBox = container.querySelector('.text-box');
-        const mediaType = mediaItem.getAttribute("data-type");
-        const mediaName = mediaItem.alt.toLowerCase();
-        const mediaTaxonomy = mediaItem.getAttribute("data-taxonomy").toLowerCase().split(',').map(tag => tag.trim());
+    let shouldDisplay = false;
+    const mediaItem = container.querySelector('.media');
+    const textBox = container.querySelector('.text-box');
+    const mediaType = mediaItem.getAttribute("data-type");
+    const mediaName = mediaItem.alt.toLowerCase();
+    const mediaTaxonomy = mediaItem.getAttribute("data-taxonomy").toLowerCase().split(',').map(tag => tag.trim());
+    
+    // Check if the media matches the selected filters
+    const isKeywordMatch = keywords.every(keyword => (
+        keyword === "" ||
+        mediaName.includes(keyword) ||
+        mediaTaxonomy.some(tag => tag.includes(keyword))
+    ));
+    const isDecadeMatch = selectedDecade === "" || mediaItem.getAttribute("data-decade") === selectedDecade;
+    const startYear = parseInt(earliestKnownExampleStart.value) || earliestKnownExampleStart === '';
+    const endYear = parseInt(earliestKnownExampleEnd.value) || earliestKnownExampleEnd === '';
+    const mediaYear =
+        parseInt(mediaItem.getAttribute("data-earliest")) >= startYear &&
+        parseInt(mediaItem.getAttribute("data-earliest")) <= endYear ||
+        startYear == '' || endYear == '';
 
-        // Check if the media matches the selected filters
-        const isKeywordMatch = keywords.every(keyword => (
-            keyword === "" ||
-            mediaName.includes(keyword) ||
-            mediaTaxonomy.some(tag => tag.includes(keyword))
-        ));
+    if(isKeywordMatch == true && isDecadeMatch == true && mediaYear == true) { shouldDisplay = true;
+    }
 
-        // Check if the media type matches the selected checkboxes
-        const isalbumCoverMatch = !albumCoverChecked || mediaTaxonomy.includes("album cover");
-        const isSocialMediaMatch = !socialMediaChecked || mediaTaxonomy.includes("social media");
-        const isVideosMatch = !videosChecked || mediaTaxonomy.includes("videos");
-        const isGraphicartworkMatch = !graphicartworkChecked || mediaTaxonomy.includes("graphicartwork");
-
-        const mediaYear = parseInt(mediaItem.getAttribute("data-earliest"));
-        const isEarliestExampleMatch = checkYearRange(mediaYear, earliestExampleType, earliestStart, earliestEnd);
-        const isDecadeMatch = selectedDecade === "" || mediaItem.getAttribute("data-decade") === selectedDecade;
-
-        // Show/hide the media container based on filter results
-        if (isKeywordMatch && isEarliestExampleMatch && isDecadeMatch) {
-            if ((socialMediaChecked && isSocialMediaMatch) || (graphicartworkChecked && isgraphicartworkMatch)) {
-                container.style.display = "block";
-            } else if (!socialMediaChecked && !graphicartworkChecked) {
-                container.style.display = "block";
-            } else {
-                container.style.display = "none";
-            }
-        } else {
-            container.style.display = "none";
-        }
+    // Show/hide the media container based on filter results
+    if (shouldDisplay) {
+    container.style.display = "block";
+} else {
+    container.style.display = "none";
+}
     });
+
 
     // Sort the displayed media containers
     const sortedContainers = mediaContainers.filter(container => container.style.display !== "none");
     sortedContainers.sort((a, b) => {
-        const aName = a.querySelector('.media').alt.toLowerCase();
-        const bName = b.querySelector('.media').alt.toLowerCase();
-        if (selectedSortOrder === "nameAZ") {
+    const aName = a.querySelector('.media').alt.toLowerCase();
+    const bName = b.querySelector('.media').alt.toLowerCase();
+    if (selectedSortOrder === "nameAZ") {
             return aName.localeCompare(bName);
-        } else {
+        } 
+        else {
             return bName.localeCompare(aName);
         }
     });
-
+    
     // Clear the media gallery
     mediaGallery.innerHTML = '';
-
+    
     // Append the sorted media containers back to the gallery
     sortedContainers.forEach(container => mediaGallery.appendChild(container));
-}
+    }  //End search handler function
 
 
-function checkYearRange(mediaYear, rangeType, startYear, endYear) {
-    if (isNaN(mediaYear)) {
-        return true; // Display media without a year
-    }
+    
 
-    if (rangeType === "before" && !isNaN(startYear)) {
-        return mediaYear < startYear;
-    } else if (rangeType === "after" && !isNaN(endYear)) {
-        return mediaYear > endYear;
-    } else if (rangeType === "between" && !isNaN(startYear) && !isNaN(endYear)) {
-        return mediaYear >= startYear && mediaYear <= endYear;
-    } else {
-        return true; // Display media if no year range is specified
-    }
-}
-
-        // Initial filtering and sorting
-        searchHandler();
-
-        function handleKeyPress(event) {
-            if (event.key === "Enter") {
-                searchHandler();
-            }
+    // Initial filtering and sorting
+    
+    function handleKeyPress(event) {
+        if (event.key === "Enter") {
+            searchHandler();
         }
-
-        // Add event listeners to media containers to show the text box on click
-        mediaContainers.forEach(container => {
-            const mediaItem = container.querySelector('.media');
-            const originalWidth = parseInt(mediaItem.getAttribute('data-original-width'));
-
-            mediaItem.addEventListener('click', function() {
-                // Remove the 'bordered' class from all media containers first
-                mediaContainers.forEach(container => {
-                    container.classList.remove('bordered');
-                    const textBox = container.querySelector('.text-box');
-                    textBox.style.display = 'none';
-
-                    // Restore the original width of the images
-                    const originalWidth = parseInt(container.querySelector('.media').getAttribute('data-original-width'));
-                    container.querySelector('.media').style.width = originalWidth + 'px';
-                });
-
-                // Show the text box corresponding to the clicked media
+    }
+    
+    // Add event listeners to media containers to show the text box on click
+    mediaContainers.forEach(container => {
+        const mediaItem = container.querySelector('.media');
+        const originalWidth = parseInt(mediaItem.getAttribute('data-original-width'));
+    
+        mediaItem.addEventListener('click', function() {
+            // Remove the 'bordered' class from all media containers first
+            mediaContainers.forEach(container => {
+                container.classList.remove('bordered');
                 const textBox = container.querySelector('.text-box');
-                textBox.style.display = 'grid';
-
-                // Add the 'bordered' class to the clicked media container and add minimum height
-                container.classList.add('bordered');
-                mediaItem.style.width = '450px';
+                textBox.style.display = 'none';
+    
+                // Restore the original width of the images
+                const originalWidth = parseInt(container.querySelector('.media').getAttribute('data-original-width'));
+                container.querySelector('.media').style.width = originalWidth + 'px';
             });
+    
+            // Show the text box corresponding to the clicked media
+            const textBox = container.querySelector('.text-box');
+            textBox.style.display = 'grid';
+    
+            // Add the 'bordered' class to the clicked media container and add minimum height
+            container.classList.add('bordered');
+            mediaItem.style.width = '450px';
         });
-
-        // Add a click event to the document to close any open text boxes and remove border styles
-        document.addEventListener('click', function(event) {
-            if (!event.target.classList.contains("media")) {
-                mediaContainers.forEach(container => {
-                    const textBox = container.querySelector('.text-box');
-                    textBox.style.display = 'none';
-
-                    // Remove the 'bordered' class from all media containers when clicking off
-                    container.classList.remove('bordered');
-
-                    // Restore the original width of the images
-                    const originalWidth = parseInt(container.querySelector('.media').getAttribute('data-original-width'));
-                    container.querySelector('.media').style.width = originalWidth + 'px';
-                });
-            }
-        });
-
-// Get all the tag buttons
-const tagButtons = document.querySelectorAll(".tag-button");
-
-// Add click event listeners to the tag buttons
-tagButtons.forEach(button => {
-    button.addEventListener("click", function () {
-        // Get the tag value from the data-tag attribute
-        const tag = button.getAttribute("data-tag");
-
-        // Set the keyword filter to the clicked tag
-        keywordFilter.value = tag;
-
-        // Trigger the search handler to apply the filter
-        searchHandler();
     });
-});
-
-        
-    </script>
-
-</body>
+    
+    // Add a click event to the document to close any open text boxes and remove border styles
+    document.addEventListener('click', function(event) {
+        if (!event.target.classList.contains("media")) {
+            mediaContainers.forEach(container => {
+                const textBox = container.querySelector('.text-box');
+                textBox.style.display = 'none';
+    
+                // Remove the 'bordered' class from all media containers when clicking off
+                container.classList.remove('bordered');
+    
+                // Restore the original width of the images
+                const originalWidth = parseInt(container.querySelector('.media').getAttribute('data-original-width'));
+                container.querySelector('.media').style.width = originalWidth + 'px';
+            });
+        }
+    });
+    
+    // Get all the tag buttons
+    const tagButtons = document.querySelectorAll(".tag-button");
+    
+    // Add click event listeners to the tag buttons
+    tagButtons.forEach(button => {
+    button.addEventListener("click", function () {
+    // Get the tag value from the data-tag attribute
+    const tag = button.getAttribute("data-tag");
+    
+    // Set the keyword filter to the clicked tag
+    keywordFilter.value = tag;
+    
+    // Trigger the search handler to apply the filter
+    //searchHandler();
+    });
+    });</script>
 <footer>
     <div class="bottom-left-nav">
-        <a href="/contact.html">CONTACT/SUBMIT</a>
+        <a href="mailto:trqalobaid@gmail.com?subject=SUBMISSION/CONTACT REQUEST:">CONTACT/SUBMIT</a>
     </div>
 </footer>
 </html>
